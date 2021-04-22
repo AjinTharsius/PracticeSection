@@ -1,0 +1,26 @@
+package justForPractice;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class FirstName {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Webdrivers\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://testingchallenges.thetestingmap.org/index.php");
+		
+		
+		WebElement firstNameIdentification = driver.findElement(By.id("firstname"));
+		
+		firstNameIdentification.sendKeys("Philips");
+		
+		WebElement submitButton = driver.findElement(By.name("formSubmit"));
+		submitButton.click();
+
+	}
+
+}
