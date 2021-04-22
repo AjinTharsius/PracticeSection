@@ -13,7 +13,7 @@ public class FirstName {
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://testingchallenges.thetestingmap.org/index.php");
 		
-		
+		// Find the element and given the firstname and given submit
 		WebElement firstNameIdentification = driver.findElement(By.id("firstname"));
 		
 		firstNameIdentification.sendKeys("Philips");
